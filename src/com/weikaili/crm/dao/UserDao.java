@@ -1,5 +1,7 @@
 package com.weikaili.crm.dao;
 
-public interface UserDao {
+import com.weikaili.crm.domain.User;
 
+public interface UserDao {
+	public void save(User user);
 }

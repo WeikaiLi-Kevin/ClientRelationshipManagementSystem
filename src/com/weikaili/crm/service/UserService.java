@@ -1,5 +1,7 @@
 package com.weikaili.crm.service;
 
-public interface UserService {
+import com.weikaili.crm.domain.User;
 
+public interface UserService {
+	public void regist(User user);
 }

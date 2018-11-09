@@ -1,11 +1,5 @@
 # ClientRelationshipManagementSystem
-# Steps:
-# 1. Create Web project, and import related jars
-# 2. Create related config files
-## 2.1 Struts2  
-### web.xml
-#### core-filter
-### struts.xml
+
 Steps:
 
 1. Create Web project, and import related jars
@@ -47,7 +41,19 @@ Steps:
 	
 
 
-#User register function implementation
+# User register function implementation
 
-	
+1. Create a register jsp file 
+2. Create a table 
+3. Create entity : User.java
+4. add Action and inject Service into Action
+5. confige action in struts.xml
+5. Create Service and inject Dao 
+6. add Hibernate into sessionFactory in applicationContext.xml
+   Dao extends HibernateDaoSupport class
+   Dao inject SessionFactory
+7. Spring transaction configuration
+	configure transaction manager
+	start annotation transaction
+	add transaction annotation in service layer  -- add @Transactional to serviceimpl class
 	
