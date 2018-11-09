@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<TITLE>客户列表</TITLE> 
+<TITLE>Client list</TITLE> 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <LINK href="${pageContext.request.contextPath }/css/Style.css" type=text/css rel=stylesheet>
 <LINK href="${pageContext.request.contextPath }/css/Manage.css" type=text/css
@@ -47,7 +47,7 @@
 					<TD vAlign=top width="100%" bgColor=#ffffff>
 						<TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
 							<TR>
-								<TD class=manageHead>当前位置：客户管理 &gt; 客户列表</TD>
+								<TD class=manageHead>current location: client management &gt; client list</TD>
 							</TR>
 							<TR>
 								<TD height=2></TD>
@@ -61,12 +61,12 @@
 										<TABLE cellSpacing=0 cellPadding=2 border=0>
 											<TBODY>
 												<TR>
-													<TD>客户名称：</TD>
+													<TD>Client name: </TD>
 													<TD><INPUT class=textbox id=sChannel2
 														style="WIDTH: 80px" maxLength=50 name="custName"></TD>
 													
 													<TD><INPUT class=button id=sButton2 type=submit
-														value=" 筛选 " name=sButton2></TD>
+														value=" filter " name=sButton2></TD>
 												</TR>
 											</TBODY>
 										</TABLE>
@@ -81,13 +81,13 @@
 											<TBODY>
 												<TR
 													style="FONT-WEIGHT: bold; FONT-STYLE: normal; BACKGROUND-COLOR: #eeeeee; TEXT-DECORATION: none">
-													<TD>客户名称</TD>
-													<TD>客户级别</TD>
-													<TD>客户来源</TD>
-													<TD>客户所属行业</TD>
-													<TD>电话</TD>
-													<TD>手机</TD>
-													<TD>操作</TD>
+													<TD>name</TD>
+													<TD>level</TD>
+													<TD>source</TD>
+													<TD>industry</TD>
+													<TD>phone</TD>
+													<TD>alternate phone</TD>
+													<TD>action</TD>
 												</TR>
 												<s:iterator var="c" value="list">
 												<TR
@@ -99,9 +99,9 @@
 													<TD><s:property value="#c.cust_phone"/></TD>
 													<TD><s:property value="#c.cust_mobile"/></TD>
 													<TD>
-													<a href="${pageContext.request.contextPath }/">修改</a>
+													<a href="${pageContext.request.contextPath }/">modify</a>
 													&nbsp;&nbsp;
-													<a href="${pageContext.request.contextPath }/">删除</a>
+													<a href="${pageContext.request.contextPath }/">delete</a>
 													</TD>
 												</TR>
 												</s:iterator>
@@ -114,20 +114,20 @@
 									<TD><SPAN id=pagelink>
 											<DIV
 												style="LINE-HEIGHT: 20px; HEIGHT: 20px; TEXT-ALIGN: right">
-												共[<B>${total}</B>]条记录,[<B>${totalPage}</B>]页
-												,每页显示
+												total[<B>${total}</B>]records,[<B>${totalPage}</B>]page
+												,per page
 												<select name="pageSize">
 												
 												<option value="15" <c:if test="${pageSize==1 }">selected</c:if>>1</option>
 												<option value="30" <c:if test="${pageSize==30 }">selected</c:if>>30</option>
 												</select>
-												条
-												[<A href="javascript:to_page(${page-1})">前一页</A>]
+												
+												[<A href="javascript:to_page(${page-1})">last page</A>]
 												<B>${page}</B>
-												[<A href="javascript:to_page(${page+1})">后一页</A>] 
-												到
+												[<A href="javascript:to_page(${page+1})">next page</A>] 
+												to
 												<input type="text" size="3" id="page" name="page" />
-												页
+												page
 												
 												<input type="button" value="Go" onclick="to_page()"/>
 											</DIV>

@@ -38,7 +38,7 @@
 							<td align="center" style="font-size: 14px;"><img
 								src="${pageContext.request.contextPath }/images/yes.png"
 								align="middle" height="30" width="30" />
-							    <span style="vertical-align: middle">您的操作成功！</span>	
+							    <span style="vertical-align: middle">Success!</span>	
 							</td>
 						</tr>
 					</table>

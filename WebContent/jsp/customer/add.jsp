@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<TITLE>添加客户</TITLE> 
+<TITLE>Add client</TITLE> 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <LINK href="${pageContext.request.contextPath }/css/Style.css" type=text/css rel=stylesheet>
 <LINK href="${pageContext.request.contextPath }/css/Manage.css" type=text/css
@@ -38,7 +38,7 @@
 					<TD vAlign=top width="100%" bgColor=#ffffff>
 						<TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
 							<TR>
-								<TD class=manageHead>当前位置：客户管理 &gt; 添加客户</TD>
+								<TD class=manageHead>current location: client management &gt; add client</TD>
 							</TR>
 							<TR>
 								<TD height=2></TD>
@@ -49,12 +49,12 @@
 						  
 						    
 							<TR>
-								<td>客户名称：</td>
+								<td>client name: </td>
 								<td>
 								<INPUT class=textbox id=sChannel2
 														style="WIDTH: 180px" maxLength=50 name="cust_name">
 								</td>
-								<td>客户级别 ：</td>
+								<td>client level: </td>
 								<td>
 								<INPUT class=textbox id=sChannel2
 														style="WIDTH: 180px" maxLength=50 name="cust_level">
@@ -63,12 +63,12 @@
 							
 							<TR>
 								
-								<td>信息来源 ：</td>
+								<td>info source:</td>
 								<td>
 								<INPUT class=textbox id=sChannel2
 														style="WIDTH: 180px" maxLength=50 name="cust_source">
 								</td>
-								<td>所属行业 ：</td>
+								<td>industry: </td>
 								<td>
 								<INPUT class=textbox id=sChannel2
 														style="WIDTH: 180px" maxLength=50 name="cust_industry">
@@ -78,12 +78,12 @@
 							<TR>
 								
 								
-								<td>固定电话 ：</td>
+								<td>phone#：</td>
 								<td>
 								<INPUT class=textbox id=sChannel2
 														style="WIDTH: 180px" maxLength=50 name="cust_phone">
 								</td>
-								<td>移动电话 ：</td>
+								<td>alternate phone#: </td>
 								<td>
 								<INPUT class=textbox id=sChannel2
 														style="WIDTH: 180px" maxLength=50 name="cust_mobile">
@@ -94,7 +94,7 @@
 							<tr>
 								<td rowspan=2>
 								<INPUT class=button id=sButton2 type=submit
-														value=" 保存 " name=sButton2>
+														value=" save " name=sButton2>
 								</td>
 							</tr>
 						</TABLE>

@@ -17,7 +17,6 @@ TD {
 <script type="text/javascript">
 
 	function registerUI(){
-		console.log("1111");
 		window.location = "${pageContext.request.contextPath}/regist.jsp";
 	}
 </script>

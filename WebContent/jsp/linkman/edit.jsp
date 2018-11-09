@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<TITLE>添加联系人</TITLE> 
+<TITLE>edit contact</TITLE> 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <LINK href="${pageContext.request.contextPath }/css/Style.css" type=text/css rel=stylesheet>
 <LINK href="${pageContext.request.contextPath }/css/Manage.css" type=text/css
@@ -38,7 +38,7 @@
 					<TD vAlign=top width="100%" bgColor=#ffffff>
 						<TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
 							<TR>
-								<TD class=manageHead>当前位置：联系人管理 &gt; 修改联系人</TD>
+								<TD class=manageHead>Current location: Contact management &gt; modify contact</TD>
 							</TR>
 							<TR>
 								<TD height=2></TD>
@@ -46,29 +46,29 @@
 						</TABLE>
 						<TABLE cellSpacing=0 cellPadding=5  border=0>
 							<tr>
-								<td>所属客户：</td>
+								<td>client: </td>
 								<td colspan="3"><input type="text" name="custId" style="WIDTH: 180px" value="${linkman.cstCustomer.custId}" /></td>
 							</tr>
 							<TR>
-								<td>联系人名称：</td>
+								<td>contact name:</td>
 								<td>
 								<INPUT class=textbox id=sChannel2
 														style="WIDTH: 180px" maxLength=50 name="lkmName" value="${linkman.lkmName}" >
 								</td>
-								<td>联系人性别：</td>
+								<td>contact gender:</td>
 								<td>
-								<input type="radio" value="1" name="lkmGender" <c:if test="${linkman.lkmGender=='1' }">checked</c:if>>男
+								<input type="radio" value="1" name="lkmGender" <c:if test="${linkman.lkmGender=='1' }">checked</c:if>>Male
 								
-								<input type="radio" value="2" name="lkmGender" <c:if test="${linkman.lkmGender=='2' }">checked</c:if>>女
+								<input type="radio" value="2" name="lkmGender" <c:if test="${linkman.lkmGender=='2' }">checked</c:if>>Female
 								</td>
 							</TR>
 							<TR>
-								<td>联系人办公电话 ：</td>
+								<td>contact phone#:</td>
 								<td>
 								<INPUT class=textbox id=sChannel2
 														style="WIDTH: 180px" maxLength=50 name="lkmPhone" value="${linkman.lkmPhone}">
 								</td>
-								<td>联系人手机 ：</td>
+								<td>contact alternate phone#：</td>
 								<td>
 								<INPUT class=textbox id=sChannel2
 														style="WIDTH: 180px" maxLength=50 name="lkmMobile" value="${linkman.lkmMobile}">
@@ -77,7 +77,7 @@
 							<tr>
 								<td rowspan=2>
 								<INPUT class=button id=sButton2 type=submit
-														value="保存 " name=sButton2>
+														value="save " name=sButton2>
 								</td>
 							</tr>
 						</TABLE>
