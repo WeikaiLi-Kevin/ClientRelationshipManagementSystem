@@ -130,7 +130,7 @@ A.active {
 											cellPadding=2 width=155 align=center border=0>
 											<TBODY>
 												<TR>
-													<TD class=menuSmall><A class=style2 href="${ pageContext.request.contextPath }/jsp/customer/add.jsp" 
+													<TD class=menuSmall><A class=style2 href="${ pageContext.request.contextPath }/customer_saveUI.action" 
 														target=main>－ Add new Client</A></TD>
 												</TR>
 												<TR> 

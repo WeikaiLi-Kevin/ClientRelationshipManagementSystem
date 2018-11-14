@@ -41,7 +41,7 @@ Steps:
 	
 
 
-# User register function implementation
+## User register function implementation
 
 1. Create a register jsp file 
 2. Create a table 
@@ -56,4 +56,39 @@ Steps:
 	configure transaction manager
 	start annotation transaction
 	add transaction annotation in service layer  -- add @Transactional to serviceimpl class
+
+8. Create login method in action 
+   check the user exists or not and call login method in userService 
+
+9. Create login method in Service
+	set user'password by using MD5Utils and call login method in userDao
+
+10. Create login method in DAO
+	get users list by using this.getHibernateTemplate().find(query,*);
+
+11. pages configuration 
+	struts.xml: add result "login" -> /login.jsp
+				add result "success" type="redirect" -> /index.jsp
+12 show data on related pages
+	success: <s:property value="#session.existUser.user_name"/>
+	fail: <s:actionerror/>
+
+## User save function implementation
+1. Create tables crm_cst_customer.sql
+2. create files: customer javabean + customer.hbm.xml
+3. Create related classes
+	3.1 Create CustomerDao interface and CustomerDaoImpl class
+	3.2 Create CustomerService and CustomerServiceImpl 
+		Inject customerDao and setter method
+	3.3 Create CustomerAction extends ActionSupport implements ModelDriven<Customer>
+		Inject CustomerService and setter method
+
+4. Add all classess into spring applicationContext.xml		
+5. Jump to the page to add customer
+	add method in CustomerAction and config in struts.xml
 	
+### Create data dictionary
+	table, entity and hbm.xml files
+
+### Create dictionary and client relationship mapping
+	modify customer entity add one-to-many relationship 

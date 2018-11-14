@@ -41,9 +41,13 @@
 		<property name="mappingResources">
 			<list>
 				<value>com/weikaili/crm/domain/User.hbm.xml</value>
+				<value>com/weikaili/crm/domain/Customer.hbm.xml</value>
+				<value>com/weikaili/crm/domain/BaseDict.hbm.xml</value>
+				
 			</list>
 		</property>
 	</bean>
+	
 	
 	<!-- Action Configuration scope==prototype means singleton -->
 	<bean id="userAction" class="com.weikaili.crm.web.action.UserAction"
@@ -58,6 +62,23 @@
 	<bean id="userDao" class="com.weikaili.crm.dao.impl.UserDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
+	
+	
+	
+	<bean id="customerAction" class="com.weikaili.crm.web.action.CustomerAction" scope="prototype">
+		<property name="customerService" ref="customerService"></property>
+	</bean>
+	<bean id="customerService" class="com.weikaili.crm.service.impl.CustomerServiceImpl">
+		<property name="customerDao" ref="customerDao"></property>
+	</bean>
+	<bean id="customerDao" class="com.weikaili.crm.dao.impl.CustomerDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	
+	
+	
+	
 	
 	<!--  transaction manager configuration -->
 	<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">

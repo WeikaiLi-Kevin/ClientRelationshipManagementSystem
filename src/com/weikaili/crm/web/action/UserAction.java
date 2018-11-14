@@ -1,5 +1,8 @@
 package com.weikaili.crm.web.action;
 
+import org.apache.struts2.ServletActionContext;
+
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.weikaili.crm.domain.User;
@@ -22,5 +25,20 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 	public String regist(){
 		userService.regist(user);
 		return LOGIN;
+	}
+	
+	public String login(){
+		User existUser = userService.login(user);
+		if(existUser == null){
+			
+			this.addActionError("Username or password is wrong!");
+			
+			return LOGIN;
+		}
+		else{
+//			ServletActionContext.getRequest().getSession().setAttribute("existUser",existUser)	
+			ActionContext.getContext().getSession().put("existUser",existUser);
+			return SUCCESS;
+		}
 	}
 }
