@@ -15,12 +15,12 @@
 		<property name="cust_level" column="cust_level"/> -->
 		<property name="cust_phone" column="cust_phone"/>
 		<property name="cust_mobile" column="cust_mobile"/>
-		<property name="cust_image" column="cust_image"/>
+		<!--  <property name="cust_image" column="cust_image"/>-->
 		
 		<!-- 配置客户与字典的多对一的映射 -->
-		<many-to-one name="baseDictSource" class="com.itheima.crm.domain.BaseDict" column="cust_source"/>
-		<many-to-one name="baseDictIndustry" class="com.itheima.crm.domain.BaseDict" column="cust_industry"/>
-		<many-to-one name="baseDictLevel" class="com.itheima.crm.domain.BaseDict" column="cust_level"/>
+		<many-to-one name="baseDictSource" class="com.weikaili.crm.domain.BaseDict" column="cust_source"/>
+		<many-to-one name="baseDictIndustry" class="com.weikaili.crm.domain.BaseDict" column="cust_industry"/>
+		<many-to-one name="baseDictLevel" class="com.weikaili.crm.domain.BaseDict" column="cust_level"/>
 		
 		<!--  
 		<set name="linkMans" cascade="delete" inverse="true">

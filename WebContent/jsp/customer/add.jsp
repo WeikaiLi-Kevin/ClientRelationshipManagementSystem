@@ -8,7 +8,31 @@
 <LINK href="${pageContext.request.contextPath }/css/Style.css" type=text/css rel=stylesheet>
 <LINK href="${pageContext.request.contextPath }/css/Manage.css" type=text/css
 	rel=stylesheet>
-
+	
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// load page will run the function
+		$.post("${pageContext.request.contextPath }/baseDict_findByTypeCode.action",
+				{"dict_type_code":"002"},function(data){
+					$(data).each(function(i,n){
+						$("#cust_source").append("<option value='"+n.dict_id+"'>"+n.dict_item_name+"</option>");
+					});
+				},"json");
+		$.post("${pageContext.request.contextPath }/baseDict_findByTypeCode.action",
+				{"dict_type_code":"006"},function(data){
+					$(data).each(function(i,n){
+						$("#cust_level").append("<option value='"+n.dict_id+"'>"+n.dict_item_name+"</option>");
+					});
+				},"json");
+		$.post("${pageContext.request.contextPath }/baseDict_findByTypeCode.action",
+				{"dict_type_code":"001"},function(data){
+					$(data).each(function(i,n){
+						$("#cust_industry").append("<option value='"+n.dict_id+"'>"+n.dict_item_name+"</option>");
+					});
+				},"json");
+	});
+</script>
 
 <META content="MSHTML 6.00.2900.3492" name=GENERATOR>
 </HEAD>
@@ -56,23 +80,25 @@
 								</td>
 								<td>client level: </td>
 								<td>
-								<INPUT class=textbox id=sChannel2
-														style="WIDTH: 180px" maxLength=50 name="cust_level">
-								</td>
+								<select id="cust_level" name="baseDictLevel.dict_id">
+										<option>-Please Select-</option>
+									</select>
+									</td>
 							</TR>
 							
 							<TR>
 								
 								<td>info source:</td>
 								<td>
-								<INPUT class=textbox id=sChannel2
-														style="WIDTH: 180px" maxLength=50 name="cust_source">
-								</td>
+									<select id="cust_source" name="baseDictSource.dict_id">
+										<option>-Please Select-</option>
+									</select>
+									</td>
 								<td>industry: </td>
 								<td>
-								<INPUT class=textbox id=sChannel2
-														style="WIDTH: 180px" maxLength=50 name="cust_industry">
-								</td>
+								<select id="cust_industry" name="baseDictIndustry.dict_id">
+										<option>-Please Select-</option>
+									</select>	</td>
 							</TR>
 							
 							<TR>

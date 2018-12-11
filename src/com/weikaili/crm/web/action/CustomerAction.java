@@ -23,4 +23,9 @@ private Customer customer = new Customer();
 		//query dictionary data   or ajax yibu
 		return "saveUI";
 	}
+	
+	public String save() {
+		customerService.save(customer);
+		return NONE;
+	}
 }

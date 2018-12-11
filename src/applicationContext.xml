@@ -76,7 +76,17 @@
 	</bean>
 	
 	
+	<!--  dictionary -->
+	<bean id="baseDictAction" class="com.weikaili.crm.web.action.BaseDictAction" scope="prototype">
+		<property name="baseDictService" ref="baseDictService"></property>
 	
+	</bean>
+	<bean id="baseDictService" class="com.weikaili.crm.service.impl.BaseDictServiceImpl">
+		<property name="baseDictDao" ref="baseDictDao"></property>
+	</bean>
+	<bean id="baseDictDao" class="com.weikaili.crm.dao.impl.BaseDictDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 	
 	
 	

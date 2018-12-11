@@ -86,9 +86,17 @@ Steps:
 4. Add all classess into spring applicationContext.xml		
 5. Jump to the page to add customer
 	add method in CustomerAction and config in struts.xml
-	
-### Create data dictionary
-	table, entity and hbm.xml files
+6. add dictionary
+	Create data dictionary
+		table, entity and hbm.xml files
+	Create dictionary and client relationship mapping
+		modify customer entity add one-to-many relationship 
+	Create dictionary's Action, Service, and DAO
+	Add all classes related to dictionary to applicationContext.xml (Spring)
+	Create entity for dictionary and mapping
+7. Asynchronous loading dictionary on the page of adding customer
 
-### Create dictionary and client relationship mapping
-	modify customer entity add one-to-many relationship 
+## Save data in the page of adding customer to database
+1. modify form in add.jsp 
+2. add action, service, and dao classes
+3. add transaction to service
