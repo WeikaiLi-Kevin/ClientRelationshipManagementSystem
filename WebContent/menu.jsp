@@ -134,7 +134,7 @@ A.active {
 														target=main>－ Add new Client</A></TD>
 												</TR>
 												<TR> 
-													<TD class=menuSmall><A class=style2 href="${ pageContext.request.contextPath }/customer_find.action"
+													<TD class=menuSmall><A class=style2 href="${ pageContext.request.contextPath }/customer_findAll.action"
 														target=main>－ Clients List</A></TD>
 												</TR>
 												

@@ -100,3 +100,13 @@ Steps:
 1. modify form in add.jsp 
 2. add action, service, and dao classes
 3. add transaction to service
+
+## Query client with pagination
+1. modify menu.jsp
+2. add findAll method to Action file
+3. create service for pagination
+4. create DAO for pagination
+5. config page jump function
+6. add function on list.jsp file to show data and page bar
+
+## The function to modify customer
